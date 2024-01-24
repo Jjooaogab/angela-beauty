@@ -11,21 +11,21 @@ export default function HeaderComponent() {
 
   const Links = [
     { name: "Home", link: "#home" },
-    { name: "Professionals", link: "#staffs" },
+    { name: "Contact Us", link: "#appointment" },
     { name: "Services", link: "#services" },
-    { name: "Contact Us", link: "#contact" },
+    { name: "About Us", link: "#about" },
   ];
 
-  const handleClickButton = () => {
-    setOpen(!open)
-  }
+  const handleScrollTopTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }  
 
   return (
     <div className='sticky w-full top-0 left-0 text-zinc-200 font-poppins z-[9] shadow-lg'>
       <div className='md:flex items-center justify-between bg-stone-600 py-2 md:px-10 px-7'>
         {/* logo section */}
         <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
-          <Image src={'/logo.png'} alt="Angela" width={60} height={60} className="rounded-full"  />
+          <Image src={'/logo.png'} alt="Angela" width={60} height={60} className="rounded-full" onClick={handleScrollTopTop}  />
         </div>
         {/* Menu icon */}
         <div onClick={() => setOpen(!open)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>

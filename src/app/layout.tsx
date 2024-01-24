@@ -21,7 +21,8 @@ const recoleta = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Angela Pereira - Pro Beauty'
+  title: 'Angela Pereira - Pro Beauty',
+  authors: [{ name: 'Joao Gabriel', url: 'https://www.instagram.com/_jjooaogab/' }],
 }
 
 export default function RootLayout({
@@ -31,6 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
+      <head>
+        <link rel="icon" href="./favicon.ico" sizes="any" />
+      </head>
       <body className={`${poppins.variable} ${recoleta.variable}`}>
         <main>
           <div className="flex flex-col">
